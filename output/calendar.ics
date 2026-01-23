@@ -1,0 +1,126 @@
+BEGIN:VCALENDAR
+PRODID:-//eluceo/ical//2.0/EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:dracula-2@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:DRACULA 30 let - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/dracula-2/
+DTSTART;TZID=Europe/Prague:20260117T190000
+DTEND;TZID=Europe/Prague:20260117T220000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:dracula-30-let@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:DRACULA 30 let - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/dracula-30-let/
+DTSTART;TZID=Europe/Prague:20260118T180000
+DTEND;TZID=Europe/Prague:20260118T210000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:hc-kometa-brno-mountfield-hk-24@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:HC Kometa Brno - Mountfield HK - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/hc-kometa-brno-mountfield-hk-24/
+DTSTART;TZID=Europe/Prague:20260125T170000
+DTEND;TZID=Europe/Prague:20260125T200000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:hc-kometa-brno-banes-motor-ceske-budejovice-7@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:HC Kometa Brno - Banes Motor České Budějovice - Winning Group Ar
+ ena
+URL:https://www.winninggrouparena.cz/event/hc-kometa-brno-banes-motor-ceske
+ -budejovice-7/
+DTSTART;TZID=Europe/Prague:20260130T180000
+DTEND;TZID=Europe/Prague:20260130T210000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:chris-norman-2@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:CHRIS NORMAN - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/chris-norman-2/
+DTSTART;TZID=Europe/Prague:20260131T200000
+DTEND;TZID=Europe/Prague:20260131T230000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:clash-15-bloody-valentines@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:CLASH 15 – BLOODY VALENTINES - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/clash-15-bloody-valentines/
+DTSTART;TZID=Europe/Prague:20260207T190000
+DTEND;TZID=Europe/Prague:20260207T220000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:snehova-kralovna@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:SNĚHOVÁ KRÁLOVNA - pohádkový muzikál na ledě - Winning Group
+  Arena
+URL:https://www.winninggrouparena.cz/event/snehova-kralovna/
+DTSTART;TZID=Europe/Prague:20260215T150000
+DTEND;TZID=Europe/Prague:20260215T180000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:souboj-univerzit@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:SOUBOJ UNIVERZIT - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/souboj-univerzit/
+DTSTART;TZID=Europe/Prague:20260225T190000
+DTEND;TZID=Europe/Prague:20260225T220000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:hc-kometa-brno-hc-ocelari-trinec-36@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:HC Kometa Brno - HC Oceláři Třinec - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/hc-kometa-brno-hc-ocelari-trinec
+ -36/
+DTSTART;TZID=Europe/Prague:20260227T180000
+DTEND;TZID=Europe/Prague:20260227T210000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:hc-kometa-brno-hc-olomouc-32@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:HC Kometa Brno - HC Olomouc - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/hc-kometa-brno-hc-olomouc-32/
+DTSTART;TZID=Europe/Prague:20260306T173000
+DTEND;TZID=Europe/Prague:20260306T203000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:kabat-turne-2026@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:Kabát Turné 2026 - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/kabat-turne-2026/
+DTSTART;TZID=Europe/Prague:20261008T200000
+DTEND;TZID=Europe/Prague:20261008T230000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:kabat-turne-2026-2@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:Kabát Turné 2026 - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/kabat-turne-2026-2/
+DTSTART;TZID=Europe/Prague:20261010T200000
+DTEND;TZID=Europe/Prague:20261010T230000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+BEGIN:VEVENT
+UID:tri-orisky-popelku-kinokoncert@winninggrouparena.cz
+DTSTAMP:20260123T170740Z
+SUMMARY:TŘI OŘÍŠKY PRO POPELKU KINOKONCERT - Winning Group Arena
+URL:https://www.winninggrouparena.cz/event/tri-orisky-popelku-kinokoncert/
+DTSTART;TZID=Europe/Prague:20261219T200000
+DTEND;TZID=Europe/Prague:20261219T230000
+LOCATION:Winning Group Arena\, Brno
+END:VEVENT
+END:VCALENDAR
