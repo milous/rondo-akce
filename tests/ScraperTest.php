@@ -45,7 +45,7 @@ final class ScraperTest extends TestCase
         $this->assertCount(1, $events);
         $this->assertSame('hc-kometa-brno-rytiri-kladno-14', $events[0]['id']);
         $this->assertSame('HC Kometa Brno - Rytiri Kladno', $events[0]['title']);
-        $this->assertSame('2026-02-15', $events[0]['date']);
+        $this->assertSame('2030-03-15', $events[0]['date']);
         $this->assertSame('18:00', $events[0]['time']);
     }
 
@@ -65,13 +65,13 @@ final class ScraperTest extends TestCase
         // First date
         $this->assertSame('koncert-dracula-0', $events[0]['id']);
         $this->assertSame('Dracula - muzikalova show', $events[0]['title']);
-        $this->assertSame('2026-02-17', $events[0]['date']);
+        $this->assertSame('2030-03-17', $events[0]['date']);
         $this->assertSame('19:00', $events[0]['time']);
 
         // Second date
         $this->assertSame('koncert-dracula-1', $events[1]['id']);
         $this->assertSame('Dracula - muzikalova show', $events[1]['title']);
-        $this->assertSame('2026-02-18', $events[1]['date']);
+        $this->assertSame('2030-03-18', $events[1]['date']);
         $this->assertSame('19:00', $events[1]['time']);
     }
 
