@@ -63,21 +63,29 @@ jobs:
           git push
 
       - name: Send failure email
-        if: failure() && vars.SMTP_SERVER != ''
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: ${{ vars.SMTP_SERVER }}
-          server_port: ${{ vars.SMTP_PORT }}
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "Calendar sync failed"
-          to: ${{ vars.NOTIFICATION_EMAIL }}
-          from: GitHub Actions <${{ secrets.SMTP_USERNAME }}>
-          body: |
-            Synchronizace kalendare selhala.
+        if: failure()
+        env:
+          SMTP_URL: ${{ secrets.SMTP_URL }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: |
+          curl --ssl-reqd \
+            --url "$SMTP_URL" \
+            --user "$SMTP_USER:$SMTP_PASSWORD" \
+            --mail-from "$MAIL_FROM" \
+            --mail-rcpt "$MAIL_TO" \
+            --upload-file - <<EOF
+          From: $MAIL_FROM
+          To: $MAIL_TO
+          Subject: Calendar sync failed
 
-            Repository: ${{ github.repository }}
-            Workflow: ${{ github.workflow }}
-            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          Synchronizace kalendare selhala.
 
-            Zkontrolujte strukturu webu nebo logy workflow.
+          Repository: ${{ github.repository }}
+          Workflow: ${{ github.workflow }}
+          Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          Zkontrolujte strukturu webu nebo logy workflow.
+          EOF
