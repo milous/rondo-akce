@@ -355,4 +355,124 @@ final class EventStorageTest extends TestCase
         $this->assertSame('cancelled', $data['events'][0]['status']);
         $this->assertArrayHasKey('cancelled_at', $data['events'][0]);
     }
+
+    #[Test]
+    public function syncCancelsKometaOnlyEventWhenItDisappearsAndMonthWasFetched(): void
+    {
+        $futureDate = (new \DateTimeImmutable('+10 days'))->format('Y-m-d');
+        $futureMonth = substr($futureDate, 0, 7);
+
+        // First sync: WGA concert + Kometa-only game (not on WGA)
+        $events = [
+            [
+                'id' => 'koncert-dracula',
+                'title' => 'Dracula show',
+                'date' => $futureDate,
+                'time' => '20:00',
+                'url' => 'https://www.winninggrouparena.cz/event/koncert-dracula/',
+            ],
+            [
+                'id' => 'kometa-' . $futureDate . '-motor-cb',
+                'title' => 'HC Kometa Brno - Motor CB',
+                'date' => $futureDate,
+                'time' => '18:00',
+                'url' => 'https://www.hc-kometa.cz/zapas.asp?id=10055',
+            ],
+        ];
+        $this->storage->sync($events, [$futureMonth]);
+
+        $data = $this->storage->loadDateFile($futureDate);
+        $this->assertCount(2, $data['events']);
+
+        // Second sync: Kometa game disappeared (e.g., rescheduled), WGA concert stays
+        $this->storage->sync([
+            [
+                'id' => 'koncert-dracula',
+                'title' => 'Dracula show',
+                'date' => $futureDate,
+                'time' => '20:00',
+                'url' => 'https://www.winninggrouparena.cz/event/koncert-dracula/',
+            ],
+        ], [$futureMonth]);
+
+        $data = $this->storage->loadDateFile($futureDate);
+        $this->assertCount(2, $data['events']);
+
+        $eventsByStatus = [];
+        foreach ($data['events'] as $event) {
+            $eventsByStatus[$event['id']] = $event['status'];
+        }
+
+        $this->assertSame('active', $eventsByStatus['koncert-dracula']);
+        $this->assertSame('cancelled', $eventsByStatus['kometa-' . $futureDate . '-motor-cb']);
+    }
+
+    #[Test]
+    public function syncDoesNotCancelKometaEventWhenMonthWasNotFetched(): void
+    {
+        $futureDate = (new \DateTimeImmutable('+10 days'))->format('Y-m-d');
+        $futureMonth = substr($futureDate, 0, 7);
+        $otherMonth = (new \DateTimeImmutable('+40 days'))->format('Y-m');
+
+        // First sync: Kometa-only game
+        $events = [
+            [
+                'id' => 'kometa-' . $futureDate . '-motor-cb',
+                'title' => 'HC Kometa Brno - Motor CB',
+                'date' => $futureDate,
+                'time' => '18:00',
+                'url' => 'https://www.hc-kometa.cz/zapas.asp?id=10055',
+            ],
+        ];
+        $this->storage->sync($events, [$futureMonth]);
+
+        // Second sync: empty scraped data, but this event's month was NOT fetched
+        $this->storage->sync([], [$otherMonth]);
+
+        $data = $this->storage->loadDateFile($futureDate);
+        $this->assertSame('active', $data['events'][0]['status']);
+        $this->assertArrayNotHasKey('cancelled_at', $data['events'][0]);
+    }
+
+    #[Test]
+    public function syncReplacesKometaEventWithWgaEventOnSameDay(): void
+    {
+        $futureDate = (new \DateTimeImmutable('+10 days'))->format('Y-m-d');
+        $futureMonth = substr($futureDate, 0, 7);
+
+        // First sync: only Kometa source has the game
+        $this->storage->sync([
+            [
+                'id' => 'kometa-' . $futureDate . '-motor-cb',
+                'title' => 'HC Kometa Brno - Motor CB',
+                'date' => $futureDate,
+                'time' => '18:00',
+                'url' => 'https://www.hc-kometa.cz/zapas.asp?id=10055',
+            ],
+        ], [$futureMonth]);
+
+        // Second sync: WGA now also has the game (deduplicated by sync.php,
+        // so only WGA version is passed). Kometa version should be cancelled.
+        $this->storage->sync([
+            [
+                'id' => 'hc-kometa-brno-motor-cb-32',
+                'title' => 'HC Kometa Brno - Motor CB - Winning Group Arena',
+                'date' => $futureDate,
+                'time' => '18:00',
+                'url' => 'https://www.winninggrouparena.cz/event/hc-kometa-brno-motor-cb-32/',
+            ],
+        ], [$futureMonth]);
+
+        $data = $this->storage->loadDateFile($futureDate);
+        $this->assertCount(2, $data['events']);
+
+        $eventsByStatus = [];
+        foreach ($data['events'] as $event) {
+            $eventsByStatus[$event['id']] = $event['status'];
+        }
+
+        // WGA version is active, old Kometa version is cancelled
+        $this->assertSame('active', $eventsByStatus['hc-kometa-brno-motor-cb-32']);
+        $this->assertSame('cancelled', $eventsByStatus['kometa-' . $futureDate . '-motor-cb']);
+    }
 }
