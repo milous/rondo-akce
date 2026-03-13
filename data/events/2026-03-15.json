@@ -1,12 +1,12 @@
 {
     "date": "2026-03-15",
-    "updated_at": "2026-03-13T12:17:55",
+    "updated_at": "2026-03-13T18:16:27",
     "events": [
         {
             "id": "kometa-2026-03-15-banes-motor-ceske-budejovice",
             "title": "HC Kometa Brno - Banes Motor České Budějovice",
             "time": "19:00",
-            "url": "https://www.hc-kometa.cz/zapasy.asp",
+            "url": "https://www.hc-kometa.cz/zapas.asp?id=PR4-10059",
             "status": "active"
         }
     ]
