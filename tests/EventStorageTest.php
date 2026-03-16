@@ -280,59 +280,62 @@ final class EventStorageTest extends TestCase
     #[Test]
     public function syncDoesNotCancelEventsInUnfetchedMonths(): void
     {
-        // Create events in two different months
-        $januaryDate = '2026-01-15';
-        $februaryDate = '2026-02-15';
+        // Create events in two different months (both in the future)
+        $month1Date = (new \DateTimeImmutable('+10 days'))->format('Y-m-d');
+        $month2Date = (new \DateTimeImmutable('+70 days'))->format('Y-m-d');
+        $month1 = substr($month1Date, 0, 7);
+        $month2 = substr($month2Date, 0, 7);
 
         $events = [
             [
-                'id' => 'january-event',
-                'title' => 'January Event',
-                'date' => $januaryDate,
+                'id' => 'month1-event',
+                'title' => 'Month 1 Event',
+                'date' => $month1Date,
                 'time' => '18:00',
-                'url' => 'https://example.com/event/january/',
+                'url' => 'https://example.com/event/month1/',
             ],
             [
-                'id' => 'february-event',
-                'title' => 'February Event',
-                'date' => $februaryDate,
+                'id' => 'month2-event',
+                'title' => 'Month 2 Event',
+                'date' => $month2Date,
                 'time' => '19:00',
-                'url' => 'https://example.com/event/february/',
+                'url' => 'https://example.com/event/month2/',
             ],
         ];
 
         // First sync - both events exist
-        $this->storage->sync($events, ['2026-01', '2026-02']);
+        $this->storage->sync($events, [$month1, $month2]);
 
-        // Second sync - only January was fetched (February fetch failed)
-        // Only January event in scraped data
+        // Second sync - only month1 was fetched (month2 fetch failed)
+        // Only month1 event in scraped data
         $this->storage->sync(
             [
                 [
-                    'id' => 'january-event',
-                    'title' => 'January Event',
-                    'date' => $januaryDate,
+                    'id' => 'month1-event',
+                    'title' => 'Month 1 Event',
+                    'date' => $month1Date,
                     'time' => '18:00',
-                    'url' => 'https://example.com/event/january/',
+                    'url' => 'https://example.com/event/month1/',
                 ],
             ],
-            ['2026-01'] // Only January was successfully fetched
+            [$month1] // Only month1 was successfully fetched
         );
 
-        // January event should remain active (it's in scraped data)
-        $januaryData = $this->storage->loadDateFile($januaryDate);
-        $this->assertSame('active', $januaryData['events'][0]['status']);
+        // Month1 event should remain active (it's in scraped data)
+        $month1Data = $this->storage->loadDateFile($month1Date);
+        $this->assertSame('active', $month1Data['events'][0]['status']);
 
-        // February event should remain active (month was not fetched, so we can't cancel)
-        $februaryData = $this->storage->loadDateFile($februaryDate);
-        $this->assertSame('active', $februaryData['events'][0]['status']);
-        $this->assertArrayNotHasKey('cancelled_at', $februaryData['events'][0]);
+        // Month2 event should remain active (month was not fetched, so we can't cancel)
+        $month2Data = $this->storage->loadDateFile($month2Date);
+        $this->assertSame('active', $month2Data['events'][0]['status']);
+        $this->assertArrayNotHasKey('cancelled_at', $month2Data['events'][0]);
     }
 
     #[Test]
     public function syncCancelsEventsOnlyInFetchedMonths(): void
     {
-        $futureDate = '2026-03-15';
+        $futureDate = (new \DateTimeImmutable('+10 days'))->format('Y-m-d');
+        $futureMonth = substr($futureDate, 0, 7);
 
         // Create an event
         $events = [
@@ -345,10 +348,10 @@ final class EventStorageTest extends TestCase
             ],
         ];
 
-        $this->storage->sync($events, ['2026-03']);
+        $this->storage->sync($events, [$futureMonth]);
 
-        // Event disappears but March was successfully fetched
-        $this->storage->sync([], ['2026-03']);
+        // Event disappears but its month was successfully fetched
+        $this->storage->sync([], [$futureMonth]);
 
         // Event should be cancelled (March was fetched and event is missing)
         $data = $this->storage->loadDateFile($futureDate);
@@ -412,7 +415,7 @@ final class EventStorageTest extends TestCase
     {
         $futureDate = (new \DateTimeImmutable('+10 days'))->format('Y-m-d');
         $futureMonth = substr($futureDate, 0, 7);
-        $otherMonth = (new \DateTimeImmutable('+40 days'))->format('Y-m');
+        $otherMonth = (new \DateTimeImmutable('+70 days'))->format('Y-m');
 
         // First sync: Kometa-only game
         $events = [

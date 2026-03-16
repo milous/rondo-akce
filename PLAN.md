@@ -2,7 +2,10 @@
 
 Automaticky parsuje kalendar akci z webu a generuje ICS soubor.
 
-**Zdroj:** https://www.winninggrouparena.cz/kalendar-akci/
+**Zdroje:**
+- https://www.winninggrouparena.cz/kalendar-akci/ (primarni — vsechny akce areny)
+- https://www.hc-kometa.cz/zapasy.asp (sekundarni — domaci zapasy HC Kometa)
+
 **Misto:** Winning Group Arena, Brno
 **Repository:** git@github.com:milous/rondo-akce.git
 
@@ -12,16 +15,22 @@ Automaticky parsuje kalendar akci z webu a generuje ICS soubor.
 rondo-akce/
 ├── .github/workflows/sync-calendar.yml   # GitHub Actions (kazdych 6h)
 ├── src/
-│   ├── Scraper.php                       # Parsovani webu
+│   ├── Scraper.php                       # Parsovani webu WGA
+│   ├── KometaScraper.php                 # Parsovani zapasu HC Kometa
+│   ├── EventDeduplicator.php             # Deduplikace mezi zdroji
 │   ├── IcsGenerator.php                  # Generovani ICS
 │   └── EventStorage.php                  # Prace s JSON soubory
 ├── tests/
-│   ├── ScraperTest.php                   # Testy scraperu
+│   ├── ScraperTest.php                   # Testy WGA scraperu
+│   ├── KometaScraperTest.php             # Testy Kometa scraperu
+│   ├── EventDeduplicatorTest.php         # Testy deduplikace
 │   ├── EventStorageTest.php              # Testy ukladani
 │   ├── IcsGeneratorTest.php              # Testy ICS generatoru
 │   └── fixtures/                         # Testovaci HTML soubory
 │       ├── calendar.html
-│       └── event-detail.html
+│       ├── event-detail.html
+│       ├── kometa-schedule.html
+│       └── kometa-schedule-with-results.html
 ├── data/
 │   └── events/
 │       ├── 2026-01-02.json               # Akce na 2.1.2026
@@ -46,7 +55,7 @@ rondo-akce/
 }
 ```
 
-### 1. Scraper (src/Scraper.php)
+### 1a. Scraper (src/Scraper.php) — Winning Group Arena
 - Pouziva `symfony/dom-crawler` pro parsovani HTML
 
 **Krok 1 - Kalendar (ziska seznam akci):**
@@ -63,6 +72,22 @@ rondo-akce/
 - Nektere akce maji VICE terminu na jedne strance → vytvori se vice zaznamu
 - Parsovani: regex pro datum a cas v textu stranky
 - **Fallback:** Pokud cas neni nalezen, pouzije se `19:00`
+
+### 1b. KometaScraper (src/KometaScraper.php) — HC Kometa
+- Parsuje domaci zapasy muzskeho A-tymu z hc-kometa.cz
+- Stranka je v kodovani Windows-1250 → konverze pres `iconv`
+- HTML struktura: `div.schedule__item`, `.schedule__date`, `.team--long`, `.schedule__score`
+- Rozlisuje cas od skore: pokud `schedule__score` obsahuje `<a>`, je to odehrany zapas (pouzije se default cas)
+- Sezony se pocitaji automaticky: zari-prosinec → pristi rok, leden-srpen → aktualni rok
+- Scrapuji se 2 sezony: zakladni cast + playoff
+- Event ID: `kometa-{datum}-{slug-soupere}` (unikatni i pri 2 zapasech za den)
+- Deduplikace mezi sezonami (stejny zapas na strance zakladni casti i playoff)
+
+### 1c. EventDeduplicator (src/EventDeduplicator.php)
+- Resi duplicity mezi WGA a HC Kometa zdrojem
+- Pokud oba zdroje maji Kometa zapas na stejny den → prednost ma WGA verze
+- Non-Kometa akce z WGA nebloguji pridani Kometa zapasu
+- Detekce: `stripos($title, 'kometa')`
 
 ### 2. ICS Generator (src/IcsGenerator.php)
 - Pouziva `eluceo/ical` knihovnu
