@@ -1,11 +1,11 @@
 {
     "date": "2026-03-22",
-    "updated_at": "2026-03-15T18:13:34",
+    "updated_at": "2026-03-16T10:45:47",
     "events": [
         {
             "id": "kometa-2026-03-22-hc-dynamo-pardubice",
             "title": "HC Kometa Brno - HC Dynamo Pardubice",
-            "time": "19:00",
+            "time": "17:00",
             "url": "https://www.hc-kometa.cz/zapasy.asp",
             "status": "active"
         },
