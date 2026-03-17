@@ -1,13 +1,21 @@
 {
     "date": "2026-03-22",
-    "updated_at": "2026-03-17T06:30:14",
+    "updated_at": "2026-03-17T12:23:51",
     "events": [
+        {
+            "id": "cf3-hc-kometa-brno-hc-dynamo-pardubice",
+            "title": "ČF3 HC Kometa Brno - HC Dynamo Pardubice - Winning Group Arena",
+            "time": "17:00",
+            "url": "https://www.winninggrouparena.cz/event/cf3-hc-kometa-brno-hc-dynamo-pardubice/",
+            "status": "active"
+        },
         {
             "id": "kometa-2026-03-22-hc-dynamo-pardubice",
             "title": "HC Kometa Brno - HC Dynamo Pardubice",
             "time": "17:00",
             "url": "https://www.hc-kometa.cz/zapasy.asp",
-            "status": "active"
+            "status": "cancelled",
+            "cancelled_at": "2026-03-17T12:23:51"
         },
         {
             "id": "kometa-2026-03-22-souper-neznamy",
