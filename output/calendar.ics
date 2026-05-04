@@ -4,7 +4,7 @@ VERSION:2.0
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:dracula-2@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:DRACULA 30 let - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/dracula-2/
 DTSTART;TZID=Europe/Prague:20260117T190000
@@ -13,7 +13,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:dracula-30-let@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:DRACULA 30 let - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/dracula-30-let/
 DTSTART;TZID=Europe/Prague:20260118T180000
@@ -22,7 +22,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:hc-kometa-brno-mountfield-hk-24@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:HC Kometa Brno - Mountfield HK - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/hc-kometa-brno-mountfield-hk-24/
 DTSTART;TZID=Europe/Prague:20260125T170000
@@ -31,7 +31,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:hc-kometa-brno-banes-motor-ceske-budejovice-7@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:HC Kometa Brno - Banes Motor České Budějovice - Winning Group Ar
  ena
 URL:https://www.winninggrouparena.cz/event/hc-kometa-brno-banes-motor-ceske
@@ -42,7 +42,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:chris-norman-2@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:CHRIS NORMAN - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/chris-norman-2/
 DTSTART;TZID=Europe/Prague:20260131T200000
@@ -51,7 +51,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:clash-15-bloody-valentines@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:CLASH 15 – BLOODY VALENTINES - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/clash-15-bloody-valentines/
 DTSTART;TZID=Europe/Prague:20260207T190000
@@ -60,7 +60,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:snehova-kralovna@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:SNĚHOVÁ KRÁLOVNA - pohádkový muzikál na ledě - Winning Group
   Arena
 URL:https://www.winninggrouparena.cz/event/snehova-kralovna/
@@ -70,7 +70,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:souboj-univerzit@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:SOUBOJ UNIVERZIT - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/souboj-univerzit/
 DTSTART;TZID=Europe/Prague:20260225T190000
@@ -79,7 +79,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:hc-kometa-brno-hc-ocelari-trinec-36@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:HC Kometa Brno - HC Oceláři Třinec - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/hc-kometa-brno-hc-ocelari-trinec
  -36/
@@ -89,7 +89,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:hc-kometa-brno-hc-olomouc-32@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:HC Kometa Brno - HC Olomouc - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/hc-kometa-brno-hc-olomouc-32/
 DTSTART;TZID=Europe/Prague:20260306T173000
@@ -98,7 +98,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:pr1-hc-kometa-brno-banes-motor-ceske-budejovice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:PŘ1 HC Kometa Brno - Banes Motor České Budějovice - Winning Gro
  up Arena
 URL:https://www.winninggrouparena.cz/event/pr1-hc-kometa-brno-banes-motor-c
@@ -109,7 +109,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kometa-2026-03-09-banes-motor-ceske-budejovice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:HC Kometa Brno - Banes Motor České Budějovice
 URL:https://www.hc-kometa.cz/zapasy.asp
 DTSTART;TZID=Europe/Prague:20260309T180000
@@ -118,7 +118,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:pr2-hc-kometa-brno-banes-motor-ceske-budejovice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:PŘ2 HC Kometa Brno - Banes Motor České Budějovice - Winning Gro
  up Arena
 URL:https://www.winninggrouparena.cz/event/pr2-hc-kometa-brno-banes-motor-c
@@ -129,7 +129,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kometa-2026-03-10-banes-motor-ceske-budejovice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:[ZRUSENO] HC Kometa Brno - Banes Motor České Budějovice
 STATUS:CANCELLED
 URL:https://www.hc-kometa.cz/zapasy.asp
@@ -139,7 +139,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kometa-2026-03-15-banes-motor-ceske-budejovice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:[ZRUSENO] HC Kometa Brno - Banes Motor České Budějovice
 STATUS:CANCELLED
 URL:https://www.hc-kometa.cz/zapas.asp?id=PR4-10059
@@ -149,7 +149,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:cf3-hc-kometa-brno-hc-dynamo-pardubice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:ČF3 HC Kometa Brno - HC Dynamo Pardubice - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/cf3-hc-kometa-brno-hc-dynamo-par
  dubice/
@@ -159,7 +159,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kometa-2026-03-22-hc-dynamo-pardubice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:[ZRUSENO] HC Kometa Brno - HC Dynamo Pardubice
 STATUS:CANCELLED
 URL:https://www.hc-kometa.cz/zapasy.asp
@@ -169,7 +169,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kometa-2026-03-22-souper-neznamy@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:[ZRUSENO] HC Kometa Brno - Soupeř neznámý
 STATUS:CANCELLED
 URL:https://www.hc-kometa.cz/zapasy.asp
@@ -179,7 +179,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:cf4-hc-kometa-brno-hc-dynamo-pardubice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:ČF4 HC Kometa Brno - HC Dynamo Pardubice - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/cf4-hc-kometa-brno-hc-dynamo-par
  dubice/
@@ -189,7 +189,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kometa-2026-03-23-hc-dynamo-pardubice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:[ZRUSENO] HC Kometa Brno - HC Dynamo Pardubice
 STATUS:CANCELLED
 URL:https://www.hc-kometa.cz/zapasy.asp
@@ -199,7 +199,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kometa-2026-03-23-souper-neznamy@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:[ZRUSENO] HC Kometa Brno - Soupeř neznámý
 STATUS:CANCELLED
 URL:https://www.hc-kometa.cz/zapasy.asp
@@ -209,7 +209,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kometa-2026-03-28-hc-dynamo-pardubice@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:[ZRUSENO] HC Kometa Brno - HC Dynamo Pardubice
 STATUS:CANCELLED
 URL:https://www.hc-kometa.cz/zapasy.asp
@@ -219,7 +219,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kometa-2026-03-28-souper-neznamy@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:[ZRUSENO] HC Kometa Brno - Soupeř neznámý
 STATUS:CANCELLED
 URL:https://www.hc-kometa.cz/zapasy.asp
@@ -229,7 +229,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:finale-extraligy-2026-vk-selmy-brno@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:Finále extraligy 2026: VK Šelmy Brno - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/finale-extraligy-2026-vk-selmy-b
  rno/
@@ -239,7 +239,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:finale-extraligy-2026-vk-selmy-brno-2@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:Finále extraligy 2026: VK Šelmy Brno - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/finale-extraligy-2026-vk-selmy-b
  rno-2/
@@ -249,7 +249,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:finale-extraligy-2026-vk-selmy-brno-3@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:Finále extraligy 2026: VK Šelmy Brno - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/finale-extraligy-2026-vk-selmy-b
  rno-3/
@@ -259,7 +259,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:hazena-cesko-francie@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:Hvězdný soupeř proti národnímu týmu. Brno zažije v květnu 
  házenkářskou show
 URL:https://www.winninggrouparena.cz/event/hazena-cesko-francie/
@@ -269,7 +269,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kabat-turne-2026@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:Kabát Turné 2026 - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/kabat-turne-2026/
 DTSTART;TZID=Europe/Prague:20261008T200000
@@ -278,7 +278,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:kabat-turne-2026-2@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:Kabát Turné 2026 - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/kabat-turne-2026-2/
 DTSTART;TZID=Europe/Prague:20261010T200000
@@ -287,7 +287,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:harlem-globetrotters-the-100-year-tour@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:HARLEM GLOBETROTTERS - THE 100 YEAR TOUR - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/harlem-globetrotters-the-100-yea
  r-tour/
@@ -297,7 +297,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:lord-of-the-dance-2026@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:Lord of the Dance 2026 - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/lord-of-the-dance-2026/
 DTSTART;TZID=Europe/Prague:20261121T200000
@@ -306,7 +306,7 @@ LOCATION:Winning Group Arena\, Brno
 END:VEVENT
 BEGIN:VEVENT
 UID:tri-orisky-popelku-kinokoncert@winninggrouparena.cz
-DTSTAMP:20260504T124314Z
+DTSTAMP:20260504T183954Z
 SUMMARY:TŘI OŘÍŠKY PRO POPELKU KINOKONCERT - Winning Group Arena
 URL:https://www.winninggrouparena.cz/event/tri-orisky-popelku-kinokoncert/
 DTSTART;TZID=Europe/Prague:20261219T200000
