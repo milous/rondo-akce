@@ -1,0 +1,13 @@
+{
+    "date": "2027-01-16",
+    "updated_at": "2026-06-19T08:02:03",
+    "events": [
+        {
+            "id": "manowar",
+            "title": "MANOWAR - Winning Group Arena",
+            "time": "20:00",
+            "url": "https://www.winninggrouparena.cz/event/manowar/",
+            "status": "active"
+        }
+    ]
+}
