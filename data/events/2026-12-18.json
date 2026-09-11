@@ -1,21 +1,21 @@
 {
     "date": "2026-12-18",
-    "updated_at": "2026-09-11T16:06:34",
+    "updated_at": "2026-09-11T20:39:53",
     "events": [
-        {
-            "id": "kometa-2026-12-18-hc-verva-litvinov",
-            "title": "HC Kometa Brno - HC Verva Litvínov",
-            "time": "18:00",
-            "url": "https://www.hc-kometa.cz/zapasy.asp",
-            "status": "active"
-        },
         {
             "id": "hc-kometa-brno-hc-verva-litvinov-30",
             "title": "HC Kometa Brno - HC Verva Litvínov - Winning Group Arena",
             "time": "18:00",
             "url": "https://www.winninggrouparena.cz/event/hc-kometa-brno-hc-verva-litvinov-30/",
+            "status": "active"
+        },
+        {
+            "id": "kometa-2026-12-18-hc-verva-litvinov",
+            "title": "HC Kometa Brno - HC Verva Litvínov",
+            "time": "18:00",
+            "url": "https://www.hc-kometa.cz/zapasy.asp",
             "status": "cancelled",
-            "cancelled_at": "2026-09-11T16:06:34"
+            "cancelled_at": "2026-09-11T20:39:53"
         }
     ]
 }
