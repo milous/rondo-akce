@@ -1,13 +1,14 @@
 {
     "date": "2026-10-10",
-    "updated_at": "2026-10-09T05:12:15",
+    "updated_at": "2026-10-09T12:48:56",
     "events": [
         {
             "id": "kabat-turne-2026-2",
             "title": "Kabát Turné 2026 - Winning Group Arena",
             "time": "20:00",
             "url": "https://www.winninggrouparena.cz/event/kabat-turne-2026-2/",
-            "status": "active"
+            "status": "cancelled",
+            "cancelled_at": "2026-10-09T12:48:56"
         }
     ]
 }
