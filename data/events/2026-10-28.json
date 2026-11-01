@@ -1,12 +1,19 @@
 {
     "date": "2026-10-28",
-    "updated_at": "2026-10-31T21:10:55",
+    "updated_at": "2026-11-01T04:59:53",
     "events": [
         {
             "id": "hc-kometa-brno-hc-ocelari-trinec-37",
             "title": "HC Kometa Brno - HC Oceláři Třinec - Winning Group Arena",
             "time": "18:00",
             "url": "https://www.winninggrouparena.cz/event/hc-kometa-brno-hc-ocelari-trinec-37/",
+            "status": "active"
+        },
+        {
+            "id": "kometa-2026-10-28-hc-ocelari-trinec",
+            "title": "HC Kometa Brno - HC Oceláři Třinec",
+            "time": "19:00",
+            "url": "https://www.hc-kometa.cz/zapas.asp?id=Utkani-s-Trincem-dospelo-do-prodlouzeni-Kometa-z-nej-bere-bod-10196",
             "status": "active"
         }
     ]
